@@ -151,6 +151,7 @@ func (s *Sorter) Swap(i, j int) {
 	tmp.Set(x)
 	x.Set(y)
 	y.Set(tmp)
+	s.vals[i], s.vals[j] = s.vals[j], s.vals[i]
 }
 
 // *cough* typedef *cough*
